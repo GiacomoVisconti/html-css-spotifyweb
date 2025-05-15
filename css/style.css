@@ -147,7 +147,7 @@ img{
                                 .btn_add_playlist{
                                     width: 3rem;
                                     height: 3rem;
-                                    background-color: var(--bg_upg_btn_container);
+                                    background-color: gray;
                                     font-size: 3rem;
                                     display: flex;
                                     justify-content: center;
@@ -178,7 +178,7 @@ img{
             .upgrade_btn_container{
                 width: 100%;
                 height: 70px    ;
-                background-color: gray;
+                background-color: var(--bg_upg_btn_container);
                 position: sticky;
                 top: 0;
             }
