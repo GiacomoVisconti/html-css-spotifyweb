@@ -98,7 +98,7 @@ img{
             .navbar{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-around;
                 .navbar_top{
                     .navbar_menu{
                         padding: 15px 0px;
@@ -147,7 +147,7 @@ img{
                                 .btn_add_playlist{
                                     width: 3rem;
                                     height: 3rem;
-                                    background-color: gray;
+                                    background-color: var(--bg_upg_btn_container);
                                     font-size: 3rem;
                                     display: flex;
                                     justify-content: center;
@@ -160,6 +160,8 @@ img{
                     }
                 }
                 .navbar_bottom{
+                    
+                    padding: 10px;
 
                 }
 
@@ -169,7 +171,7 @@ img{
         .main_container{
             width: calc(100% - 230px);
             height: 100%;
-            background-color: green;
+            background-color: var(--bg_main_container);
             overflow-y: auto;
 
             
@@ -188,11 +190,7 @@ img{
     
     .bottom{
         height: 70px;
-        background-color: blue;
-        
-
-        
-        
+        background-color: var(--bg_media_player);     
     }
 }
 
