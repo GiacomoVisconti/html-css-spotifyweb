@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+.debug{
+    *{
+        border: 1px dashed red;
+        color:white;;
+    }
+}
+:root{
+    --bg_sidebar: #000000;
+    --bg_upg_btn_container:#080b12;
+    --bg_main_container:#141922;
+    --bg_media_player:#282828;
+}
 /* UTILS */
 .d_flex{
     display: flex;
@@ -51,6 +63,14 @@
 
 /* GENERALS */
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
 .wrapper{
     height: 100vh;
     width: 100vw;
@@ -62,7 +82,89 @@
         .sidebar{
             height: 100%;
             width: 230px;
-            background-color: aqua;
+            background-color: var(--bg_sidebar);
+            overflow: hidden;
+
+            /* *LOGO */
+            .logo{
+                height: 70px;             
+                transform: scale(0.6);
+                
+                
+                
+                
+                
+            }
+            .navbar{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .navbar_top{
+                    .navbar_menu{
+                        padding: 15px 0px;
+                        a{
+                            text-decoration: none;
+                        }
+                        
+                        
+                        .navbar_menu_list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            list-style-type: none;
+                            li{
+                                padding: 5px 10px;
+                                border-left: 2px solid transparent;
+                            }                                
+                        }
+                    }
+                    .navbar_playlist{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        .navbar_playlist_title{
+                            padding: 10px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            padding: 0px 10px;
+                            color: white;   
+                        }
+                        .navbar_playlist_list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            li{
+                                span{
+                                    color: var(--bg_sidebar);
+                                }
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                padding: 0px 10px;
+                                color: gray;
+    
+                                
+                                .btn_add_playlist{
+                                    width: 3rem;
+                                    height: 3rem;
+                                    background-color: gray;
+                                    font-size: 3rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                
+                            }
+                        }
+    
+                    }
+                }
+                .navbar_bottom{
+
+                }
+
+            }
+
         }
         .main_container{
             width: calc(100% - 230px);
