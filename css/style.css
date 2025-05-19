@@ -8,7 +8,7 @@
 .debug{
     *{
         border: 1px dashed red;
-        color:white;;
+        
     }
 }
 :root{
@@ -82,12 +82,135 @@ img{
     width: 100%;
 }
 
+.subtitle{
+    color: gray;
+    font-size: 1rem;
+}
+
+/* !MAIN SECTION */
+    .main_navbar_menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 20px;
+    a{
+        text-decoration: none;
+        
+    }
+}
+.music_section{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}          
+.music_section_title{
+    padding-bottom: 10px;
+    color: white;
+}
+/* CARD */
+.music_card{
+display: flex;
+flex-direction: column;
+align-content: center;
+gap: 10px;
+padding: 10px;
+}
+
+.card_caption{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .music_title{
+        color: white;
+    }                           
+} 
+
+.artist_card{
+    img{
+
+        
+        border-radius: 50%;  
+    }
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;              
+    justify-content: space-between;
+}
+
+.user{
+    color: white;
+display: flex;
+padding: 10px 0;
+}
+
+.user_name{
+    font-size: 0,9 rem;
+    padding: 5px;
+}
+
+.fa-circle-user{
+    padding: 5px;
+    transform: scale(1,1);
+}
+
+.navbar_install{
+    padding: 5px;
+    font-size: o,9;
+}
+
+.fa-circle-down{
+    padding: 5px;
+}
+
+.main_navbar_menu_container{
+    padding: 10px;
+}
+
+.upgrade_btn_container{
+    padding-right: 10px;
+    a{
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 5px 15px;
+        border-radius: 1rem;
+    }
+}
+
+.selected{
+    color: white;   
+    
+} 
+
+.not_selected{
+    color: gray;
+}
+
+.navbar_menu_icon{
+    color: gray;
+    padding-right: 5px;
+    line-height: 15px;
+    img{
+        width: 20px;
+        vertical-align: center;
+    }
+}
+
+
+
 .wrapper{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    
-    
+    .bottom{
+        height: 70px;
+        background-color: var(--bg_media_player);     
+    }
+
+
     .top{
         height: calc(100% - 70px);
         display: flex;
@@ -95,24 +218,17 @@ img{
             height: 100%;
             width: 230px;
             background-color: var(--bg_sidebar);
-            overflow: hidden;
+            overflow: hidden;         
 
             /* *LOGO */
             .logo{
                 height: 70px;             
-                transform: scale(0.6);
-                
-                
-                
-                
-                
+                transform: scale(0.6);    
             }
-            .navbar{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                
                 .navbar_top{
                     .navbar_menu{
+                        
                         padding: 15px 0px;
                         a{
                             text-decoration: none;
@@ -124,9 +240,12 @@ img{
                             flex-direction: column;
                             gap: 10px;
                             list-style-type: none;
+                            
+                                                    
                             li{
                                 padding: 5px 10px;
                                 border-left: 2px solid transparent;
+                               
                             }                                
                         }
                     }
@@ -144,7 +263,7 @@ img{
                         .navbar_playlist_list{
                             display: flex;
                             flex-direction: column;
-                            gap: 15px;
+                            gap: 10px; 
                             li{
                                 span{
                                     color: var(--bg_sidebar);
@@ -174,6 +293,10 @@ img{
                 .navbar_bottom{
                     
                     padding: 10px;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
 
                 }
 
@@ -198,29 +321,105 @@ img{
                 align-items: center;
             }
 
-            /* !MAIN SECTION */
-            .main_section{
-
-                .main_navbar_menu{
-                    display: flex;
-                    list-style-type: none;
-                    justify-content: center;
-                    gap: 20px;
-                    a{
-                        text-decoration: none;
-                        color: gray;
-                    }
-                }
-                
-            }
+            
         }
     }
     
-    .bottom{
-        height: 70px;
-        background-color: var(--bg_media_player);     
-    }
+.bottom{
+    color: white;
+    
 }
 
+.player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 10px;
+}
 
+.stato_canzone{
+    display: flex;
+    gap: 5px;
+}
 
+.song{
+    display: flex;
+    width: 250px;
+    align-items: center;
+}
+
+.volume{
+    display: flex;
+    width: 80px;
+    align-items: center;
+}
+
+.media_control{
+    display: flex;
+    gap: 10px;
+    font-size: 0.7rem;
+}
+
+.remaning_song, .volume_used{
+    width: 20%;
+    height: 0;
+    border: 2px solid white;
+    border-radius: 30px;
+    
+}
+
+.played_song, .volume_remaning{
+    border-radius: 30px;
+    width: 80%;
+    border: 2px solid gray;
+}
+
+.time{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.music{
+    display: flex;
+    img{
+        width: 40px;
+    };
+}
+
+.music_icons{
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 5px;
+    color: gray;
+}
+
+.fa-circle-play{
+    font-size: 2rem;
+}
+
+.play_pause{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.player_music_title{
+    padding-left: 5px;
+    font-size: 0.8rem;
+    vertical-align: center;
+}
+
+.main_navbar_menu{
+    a{
+
+        color: gray;
+    }
+
+    .selected{
+        border-bottom: 2px solid green;
+    }
+}
