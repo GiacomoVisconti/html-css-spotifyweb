@@ -93,8 +93,14 @@ img{
     list-style-type: none;
     justify-content: center;
     gap: 20px;
+    .selected{
+        border-bottom: 2px solid green;
+        
+    }
     a{
         text-decoration: none;
+        color: gray;
+
         
     }
 }
@@ -244,8 +250,7 @@ padding: 10px 0;
                                                     
                             li{
                                 padding: 5px 10px;
-                                border-left: 2px solid transparent;
-                               
+                                border-left: 2px solid transparent;                               
                             }                                
                         }
                     }
@@ -413,13 +418,6 @@ padding: 10px 0;
     vertical-align: center;
 }
 
-.main_navbar_menu{
-    a{
-
-        color: gray;
-    }
-
-    .selected{
-        border-bottom: 2px solid green;
-    }
+@media screen and (min-widht:868px) {
+    
 }
