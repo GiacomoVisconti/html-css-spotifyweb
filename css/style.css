@@ -85,6 +85,11 @@ img{
 .subtitle{
     color: gray;
     font-size: 1rem;
+    &:hover{
+        color: white;
+        text-decoration:underline;
+        cursor: pointer;
+    }
 }
 
 /* !MAIN SECTION */
@@ -100,7 +105,9 @@ img{
     a{
         text-decoration: none;
         color: gray;
-
+        &:hover{
+            color: white;
+        }
         
     }
 }
@@ -115,10 +122,11 @@ gap: 20px;
 }
 /* CARD */
 .music_card{
-display: flex;
-flex-direction: column;
-align-content: center;
-padding: 10px 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px 10px 10px 0;
+    
 }
 
 .card_caption{
@@ -177,7 +185,12 @@ padding: 10px 10px 10px 0;
 
 .navbar_install{
     padding: 5px;
-    font-size: o,9;
+    font-size: 0.9rem;
+    color: gray;
+    &:hover{
+        color: white;
+        cursor: pointer;
+    }
 }
 
 .fa-circle-down{
@@ -190,12 +203,16 @@ padding: 10px 10px 10px 0;
 
 .upgrade_btn_container{
     padding-right: 10px;
+    z-index: 100;
     a{
         text-decoration: none;
         color: white;
         border: 1px solid white;
         padding: 5px 15px;
         border-radius: 1rem;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -217,6 +234,50 @@ padding: 10px 10px 10px 0;
         vertical-align: center;
     }
 }
+
+.overlay_img{
+    width: 100%;
+    height: 100%;
+   
+    
+    
+}
+
+
+.card_img{
+    position: relative;
+    
+    img{
+        width: 100%;
+        height: 100%;
+    };
+    
+    .fa-circle-play{
+        display: none;
+    }
+    &:hover{   
+        cursor: pointer;
+        .fa-circle-play{
+            display: inline;
+            position: absolute; 
+            color: white;              
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            transform: scale(2);
+            z-index: 50;
+           
+            
+        }
+        .overlay_img{
+
+           
+            opacity: 60%;
+        }
+
+    }
+}
+
 
 .wrapper{
     height: 100vh;
@@ -260,13 +321,23 @@ padding: 10px 10px 10px 0;
                             
                             .selected{
                                 border-left: 2px solid green;
+                                a{
+
+                                    color: white;
+                                }
                             }
                                                     
                             li{
                                 padding: 5px 10px;
                                 border-left: 2px solid transparent;
+
+                                &:hover{
+                                    a{
+                                        color: white;
+                                    }
+                                }
                                 a{
-                                    color: white;
+                                    color: gray;
                                 }                               
                             }                                
                         }
@@ -287,6 +358,16 @@ padding: 10px 10px 10px 0;
                             flex-direction: column;
                             gap: 10px; 
                             li{
+                                &:hover{
+                                    color: white;
+                                    cursor: pointer;
+                                    .btn_add_playlist{
+                                        background-color: white;
+                                    }
+                                    .icon{
+                                        color: white;
+                                    }
+                                }
                                 span{
                                     color: var(--bg_sidebar);
                                 }
@@ -369,32 +450,64 @@ padding: 10px 10px 10px 0;
     display: flex;
     width: 250px;
     align-items: center;
+    &:hover{
+        cursor: pointer;
+        .cursor{
+            display: block;
+        }
+        .played_song{
+        border: 2px solid green;
+
+        }
+    }
 }
 
 .volume{
     display: flex;
     width: 80px;
     align-items: center;
+    &:hover{
+        .cursor{
+            display: block;
+        }
+        .volume_used{
+        border: 2px solid green;
+
+        }
+    }
 }
 
 .media_control{
     display: flex;
     gap: 10px;
     font-size: 0.7rem;
+    .icon, .volume:hover{
+        
+        cursor: pointer;
+    
+    }
 }
 
-.remaning_song, .volume_used{
+.cursor{
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+
+.remaning_song, .volume_remaning{
     width: 20%;
     height: 0;
-    border: 2px solid white;
+    border: 2px solid gray;
     border-radius: 30px;
     
 }
 
-.played_song, .volume_remaning{
+.played_song, .volume_used{
     border-radius: 30px;
     width: 80%;
-    border: 2px solid gray;
+    border: 2px solid white;
 }
 
 .time{
@@ -415,10 +528,17 @@ padding: 10px 10px 10px 0;
     padding-left: 3rem;
     gap: 5px;
     color: gray;
+    .icon:hover{
+        color: white;
+        cursor: pointer;
+    }
 }
 
 .fa-circle-play{
     font-size: 2rem;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .play_pause{
@@ -427,6 +547,9 @@ padding: 10px 10px 10px 0;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    .icon:hover{
+        cursor: pointer;
+    }
 }
 
 .player_music_title{
@@ -443,7 +566,7 @@ padding: 10px 10px 10px 0;
 
 /******************** TABLET *********************/
 
-@media screen and (min-width:868px) {
+@media screen and (max-width:868px) {
     /* UTILS */
     /*#region columns*/
     .col_md_1 {
