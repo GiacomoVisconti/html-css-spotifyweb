@@ -300,8 +300,14 @@ gap: 20px;
 
             /* *LOGO */
             .logo{
-                height: 70px;             
-                transform: scale(0.6);    
+                height: 70px; 
+                #logo_large{
+                    transform: scale(0.6);  
+
+                }            
+                #logo_small{
+                    display: none;
+                }  
             }
                 
                 .navbar_top{
@@ -660,4 +666,62 @@ gap: 20px;
     .stato_canzone{
         gap: 5px;
     }
+}
+
+@media screen and (max-width:552px){
+    .wrapper{
+        .top{
+
+            .sidebar{
+                height: 100%;
+                width: 50px;
+                .navbar_top{
+                    flex-direction: column;
+                    .navbar_playlist {
+                        display: none
+                    }
+                    .navbar_menu{
+                        .navbar_menu_list{
+
+                            .selected{
+    
+                                border: 0px solid transparent;
+                            }
+                        }
+                        a{
+                            display: none;
+                        }
+                    }
+                }
+                .navbar_bottom{
+                    flex-direction: column;
+                    .navbar_install_text, .user_name{
+                        display: none;
+                    };
+                }
+            } 
+            .logo{
+                height: 70px;
+                #logo_large{
+                    display: none;
+                }
+                #logo_small{
+                    transform: scale(0.6);
+                    display: block;
+                }
+            }
+        }
+        .main_container{
+            
+            width: calc(100% - 50px);
+        }
+    }
+    
+    .music{
+        transform: scale(0.8);
+    }
+    .music_icons{
+        padding: 0;
+    }
+
 }
